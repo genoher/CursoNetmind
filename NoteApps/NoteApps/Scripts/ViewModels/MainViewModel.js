@@ -4,4 +4,4 @@
 }
 
 angular.module("NotesApp")
-       .controller("MainviewModel", MainViewModel);
+       .controller("MainViewModel", MainViewModel);
