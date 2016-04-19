@@ -21,15 +21,20 @@
     <!-- Javascript NotesApp -->
     <script src="Application/NotesApp.js"></script>
     <script src="ViewModels/MainViewModel.js"></script>
+    
 </head>
 <body ng-controller="MainViewModel as MainVM">
-    
-    <p> <span>Titulo:</span>{{ MainVM.Title }}</p>
-    <br/>
-    
-    <input type="text" ng-model="MainVM.Title" />
+    <div>
+        <h2>Ejercicio</h2>
+        <p> <span>Titulo:</span>{{ MainVM.Title }}</p>
+        <input type="text" ng-model="MainVM.Title" />
+        <input type="button" value="Cambiar Titulo" ng-click="MainVM.ChangeTitle()" />
+    </div>
 
-    <input type="button" value="Cambiar Titulo" ng-click="MainVM.ChangeTitle()" />
-    
+    <div>
+        <h2>Ayuda</h2>
+        <!-- Directivas Angular -->
+        <a href="https://code.angularjs.org/1.5.3/docs/api">Directivas Angular</a>
+    </div>
 </body>
 </html>
