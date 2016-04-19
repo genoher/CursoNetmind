@@ -2,7 +2,7 @@
 
     <div class="form-group">
         <label for="exampleInputEmail1">Nombre</label>
-        <input type="email" class="form-control" placeholder="Nombre Usuario" 
+        <input type="text" class="form-control" placeholder="Nombre Usuario" 
                ng-model="LoginVM.UserLogin">
     </div>
 
@@ -15,8 +15,9 @@
     <input type="button" class="btn btn-default" value="Login" 
            ng-click="LoginVM.Login()" />
     
-    <br/>  
-    <span> {{ LoginVM.Password }} </span>
     <br />
     <span> {{ LoginVM.UserLogin }} </span>
+    <br/>  
+    <span> {{ LoginVM.Password }} </span>
+    
 </div>

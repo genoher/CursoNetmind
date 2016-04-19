@@ -11,7 +11,7 @@
     self.ConmuteLoginText = ocultar;
 
     self.Login = function () {
-        alert("Login - No implementado");
+        alert("Login - Usuario: " + self.UserLogin + " Password: " + self.Password);
     }
 
     self.ConmuteLogin = function () {
