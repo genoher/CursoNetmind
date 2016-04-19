@@ -2,6 +2,8 @@
 <html ng-app="NotesApp">
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>Notes App</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
@@ -21,6 +23,13 @@
     <script src="ViewModels/MainViewModel.js"></script>
 </head>
 <body ng-controller="MainViewModel as MainVM">
-    {{ MainVM.Title }}
+    
+    <p> <span>Titulo:</span>{{ MainVM.Title }}</p>
+    <br/>
+    
+    <input type="text" ng-model="MainVM.Title" />
+
+    <input type="button" value="Cambiar Titulo" ng-click="MainVM.ChangeTitle()" />
+    
 </body>
 </html>
