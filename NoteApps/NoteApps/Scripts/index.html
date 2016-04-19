@@ -21,15 +21,22 @@
     <!-- Javascript NotesApp -->
     <script src="Application/NotesApp.js"></script>
     <script src="ViewModels/MainViewModel.js"></script>
-    
+    <script src="ViewModels/LoginViewModel.js"></script>
 </head>
-<body ng-controller="MainViewModel as MainVM">
-    <div>
-        <h2>Ejercicio</h2>
+<body>
+
+    <div ng-controller="MainViewModel as MainVM">
+        <h2>Ejercicio 1</h2>
         <p> <span>Titulo:</span>{{ MainVM.Title }}</p>
         <input type="text" ng-model="MainVM.Title" />
         <input type="button" value="Cambiar Titulo" ng-click="MainVM.ChangeTitle()" />
         <input type="button" value="Lanzar un Alert" ng-click="MainVM.RaiseAlert()" />
+    </div>
+
+    <div ng-controller="LoginViewModel as MainVM">
+        <h2>Ejercicio 2</h2>
+        <p> <span>Titulo:</span>{{ MainVM.User }}</p>
+        <div ng-include="'Views/Login.html''" />
     </div>
 
     <div>

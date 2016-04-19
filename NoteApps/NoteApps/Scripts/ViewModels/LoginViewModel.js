@@ -1,6 +1,6 @@
 ﻿LoginViewModel = function () {
     var self = this;
-    self.User;
+    self.User="User";
     self.Password;
 
     self.Login = function () {
