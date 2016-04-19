@@ -40,16 +40,31 @@
     <div>
         <h2>Apuntes</h2>
         <section>
-            <p>Clase Javascript: NombreClase = function() { }</p>
+            <h3>Clases con Javascript</h3>
             <p>Dentro de una clase javascript podemos tener fields, properties, functions...
+                <br />
+                <span>Ejemplo: </span>
                 <br/>
-                <span>Ejemplo: </span> <br/>
-                NombreClase = function() {<br/>
-                     self.Title; /* Definicion de un field/property publico */ <br/>
-                    /* con el self logramos visibilidad hacia fuera de la clase */<br />
-                }
-            </p>
-            
+                <xmp>
+                    /* MainViewModel seria el nombre de la clase */
+                    MainViewModel = function () {
+
+                        var self = this; /* Super importante!! */
+
+                        self.Title = "Qué pasa tronco!!"; /* Field / Property */
+
+                        // Funcion que cambia la propiedad titulo
+                        self.ChangeTitle = function() {  
+                            self.Title = "hola caracola";
+                        }
+
+                        // Funcion que muestra un alert con el titulo
+                        self.RaiseAlert = function () {
+                            alert(self.Title);
+                        }
+                    }
+                </xmp>
+            </p>            
         </section>
     </div>
 </body>
