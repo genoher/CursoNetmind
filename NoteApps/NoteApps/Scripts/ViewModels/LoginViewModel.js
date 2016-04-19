@@ -3,7 +3,7 @@
     self.User="User";
     self.Password;
 
-    self.Login = function () {
+    self.CommuteLogin = function () {
         alert("No implementado");
     }
 }

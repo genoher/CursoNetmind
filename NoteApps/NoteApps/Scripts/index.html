@@ -25,33 +25,21 @@
 </head>
 <body>
 
-    <div ng-controller="MainViewModel as MainVM">
+    <div class="container" ng-controller="MainViewModel as MainVM">
         <h2>Ejercicio 1</h2>
-        <p> <span>Titulo:</span>{{ MainVM.Title }}</p>
-        <input type="text" ng-model="MainVM.Title" />
-        <input type="button" value="Cambiar Titulo" ng-click="MainVM.ChangeTitle()" />
-        <input type="button" value="Lanzar un Alert" ng-click="MainVM.RaiseAlert()" />
-    </div>
-
-    <div ng-controller="LoginViewModel as MainVM">
-        <h2>Ejercicio 2</h2>
-        <p> <span>Titulo:</span>{{ MainVM.User }}</p>
-        <div ng-include="'Views/Login.html''" />
-    </div>
-
-    <div>
-        <h2>Ayuda</h2>
-        <!-- Directivas Angular -->
-        <a href="https://code.angularjs.org/1.5.3/docs/api">Directivas Angular</a>
-    </div>
-    <div>
-        <h2>Apuntes</h2>
         <section>
-            <h3>Clases con Javascript</h3>
-            <p>Dentro de una clase javascript podemos tener fields, properties, functions...
+            <p> <span>Titulo:</span>{{ MainVM.Title }}</p>
+            <input type="text" ng-model="MainVM.Title" />
+            <input type="button" value="Cambiar Titulo" ng-click="MainVM.ChangeTitle()" />
+            <input type="button" value="Lanzar un Alert" ng-click="MainVM.RaiseAlert()" />
+        </section>       
+
+        <section>
+            <h3>Apuntes: Clases con Javascript</h3>
+            <p>
+                Dentro de una clase javascript podemos tener fields, properties, functions...
                 <br />
                 <span>Ejemplo: </span>
-                <br/>
                 <xmp>
                     /* MainViewModel seria el nombre de la clase */
                     MainViewModel = function () {
@@ -61,8 +49,8 @@
                         self.Title = "Qué pasa tronco!!"; /* Field / Property */
 
                         // Funcion que cambia la propiedad titulo
-                        self.ChangeTitle = function() {  
-                            self.Title = "hola caracola";
+                        self.ChangeTitle = function() {
+                        self.Title = "hola caracola";
                         }
 
                         // Funcion que muestra un alert con el titulo
@@ -71,8 +59,45 @@
                         }
                     }
                 </xmp>
-            </p>            
+            </p>
         </section>
     </div>
+
+    <div class="container" ng-controller="LoginViewModel as MainVM">
+        <h2>Ejercicio 2</h2>
+        <section>
+            <div ng-include="'Views/Login.html'">
+            </div>
+        </section>
+
+        <section>
+            <h3>Apuntes: ng-include</h3>
+            <p>Dos maneras de incluir una partial view, directiva <a href="https://code.angularjs.org/1.5.3/docs/api/ng/directive/ngInclude" target="_blank">ng-include</a> dentro de un div, o directamente como un elemento.</p>
+            <xmp>
+                <div ng-include="'Views/Login.html'">
+                </div>
+
+                <ng-include src="'Views/Login.html'">
+                </ng-include>
+            </xmp>
+        </section>
+        
+
+        
+
+        
+
+    </div>
+
+
+
+    <div class="container">
+        <h2>Ayuda</h2>
+        <!-- Directivas Angular -->
+        <a href="https://code.angularjs.org/1.5.3/docs/api">Directivas Angular</a>
+    </div>
+
+   
+
 </body>
 </html>
