@@ -10,6 +10,7 @@
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Styles NotesApp -->
     <link href="Css/site.css" rel="stylesheet" />
+    <link href="CSS/home.css" rel="stylesheet" />
     <!-- Angular JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <!-- Angular Animate -->
@@ -23,6 +24,7 @@
     <script src="ViewModels/MainViewModel.js"></script>
     <script src="ViewModels/LoginViewModel.js"></script>
     <script src="ViewModels/LoginViewModel2.js"></script>
+    <script src="ViewModels/HomeViewModel.js"></script>
 </head>
 <body>
 
@@ -66,6 +68,7 @@
 
     <div class="container" ng-controller="LoginViewModel as LoginVM">
         <h2>Ejercicio 2</h2>
+        <p>Incluir una pagina que mostraremos y ocultaremos mediante un boton.</p>
         <section>
             <div ng-include="'Views/LoginView.html'" ng-show="LoginVM.IsLoginVisible">
             </div>
@@ -93,10 +96,23 @@
 
     <div class="container">
         <h2>Ejercicio 3</h2>
+        <p>similar al anterior pero el controller se maneja desde la propia vista</p>
         <section>
             <div ng-include="'Views/LoginView2.html'">
-            </div>            
+            </div>               
         </section>        
+    </div>
+    
+    <div class="container"  ng-controller="MainViewModel as MainVM">
+        <h2>Ejercicio 4</h2>
+        <p>Tenemos dos vistas, que son manejadas desde el controller Main.</p>
+        <section>
+            <div ng-include="'Views/LoginView2.html'" ng-show="!MainVM.IsLogon">
+            </div>
+
+            <div ng-include="'Views/HomeView.html'" ng-show="!MainVM.IsLogon">
+            </div>
+        </section>
     </div>
 
     <div class="container">

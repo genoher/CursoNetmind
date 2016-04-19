@@ -249,6 +249,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\CSS\home.css" />
     <Content Include="Scripts\CSS\site.css" />
     <Content Include="Scripts\index.html" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -261,9 +262,11 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\ViewModels\HomeViewModel.js" />
     <Content Include="Scripts\ViewModels\LoginViewModel2.js" />
     <Content Include="Scripts\ViewModels\LoginViewModel.js" />
     <Content Include="Scripts\ViewModels\MainViewModel.js" />
+    <Content Include="Scripts\Views\HomeView.html" />
     <Content Include="Scripts\Views\LoginView2.html" />
     <Content Include="Scripts\Views\LoginView.html" />
     <Content Include="Web.config" />
