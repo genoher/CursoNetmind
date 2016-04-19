@@ -66,18 +66,20 @@
     <div class="container" ng-controller="LoginViewModel as MainVM">
         <h2>Ejercicio 2</h2>
         <section>
-            <div ng-include="'Views/Login.html'">
+            <div ng-include="'Views/LoginView.html'" ng-show="MainVM.IsLoginVisible">
             </div>
+            <br/>
+            <input type="button" class="btn btn-default" value="{{ MainVM.ConmuteLoginText }}" ng-click="MainVM.ConmuteLogin()" />
         </section>
 
         <section>
             <h3>Apuntes: ng-include</h3>
             <p>Dos maneras de incluir una partial view, directiva <a href="https://code.angularjs.org/1.5.3/docs/api/ng/directive/ngInclude" target="_blank">ng-include</a> dentro de un div, o directamente como un elemento.</p>
             <xmp>
-                <div ng-include="'Views/Login.html'">
+                <div ng-include="'Views/LoginView.html'">
                 </div>
 
-                <ng-include src="'Views/Login.html'">
+                <ng-include src="'Views/LoginView.html'">
                 </ng-include>
             </xmp>
         </section>

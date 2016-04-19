@@ -1,10 +1,24 @@
 ﻿LoginViewModel = function () {
     var self = this;
-    self.User="User";
-    self.Password;
+    self.User = "";
+    self.Password = "";
+    self.IsLoginVisible = true;
 
-    self.CommuteLogin = function () {
-        alert("No implementado");
+    var ocultar = "Ocultar Login";
+    var mostrar = "Mostrar Login";
+    self.ConmuteLoginText = ocultar;
+
+    self.Login = function () {
+        alert("Login - No implementado");
+    }
+
+    self.ConmuteLogin = function () {
+        self.IsLoginVisible = !self.IsLoginVisible;
+        if (self.IsLoginVisible) {
+            self.ConmuteLoginText = ocultar;
+        } else {
+            self.ConmuteLoginText = mostrar;
+        }
     }
 }
 
