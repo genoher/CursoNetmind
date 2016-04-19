@@ -5,6 +5,10 @@
     self.ChangeTitle = function() {
         self.Title = "hola caracola";
     }
+
+    self.RaiseAlert = function () {
+        alert(self.Title);
+    }
 }
 
 angular.module("NotesApp")

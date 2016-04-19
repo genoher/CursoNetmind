@@ -29,12 +29,28 @@
         <p> <span>Titulo:</span>{{ MainVM.Title }}</p>
         <input type="text" ng-model="MainVM.Title" />
         <input type="button" value="Cambiar Titulo" ng-click="MainVM.ChangeTitle()" />
+        <input type="button" value="Lanzar un Alert" ng-click="MainVM.RaiseAlert()" />
     </div>
 
     <div>
         <h2>Ayuda</h2>
         <!-- Directivas Angular -->
         <a href="https://code.angularjs.org/1.5.3/docs/api">Directivas Angular</a>
+    </div>
+    <div>
+        <h2>Apuntes</h2>
+        <section>
+            <p>Clase Javascript: NombreClase = function() { }</p>
+            <p>Dentro de una clase javascript podemos tener fields, properties, functions...
+                <br/>
+                <span>Ejemplo: </span> <br/>
+                NombreClase = function() {<br/>
+                     self.Title; /* Definicion de un field/property publico */ <br/>
+                    /* con el self logramos visibilidad hacia fuera de la clase */<br />
+                }
+            </p>
+            
+        </section>
     </div>
 </body>
 </html>
