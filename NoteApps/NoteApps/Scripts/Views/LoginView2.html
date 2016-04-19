@@ -1,0 +1,29 @@
+﻿<div ng-controller="LoginViewModel as LoginVM">  
+
+    <form ng-show="LoginVM.IsLoginVisible">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Nombre</label>
+            <input type="email" class="form-control" placeholder="Nombre Usuario"
+                   ng-model="LoginVM.UserLogin">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Contraseña</label>
+            <input type="password" class="form-control" placeholder="Contraseña"
+                   ng-model="LoginVM.Password">
+        </div>
+
+        <input type="button" class="btn btn-default" value="Login"
+               ng-click="LoginVM.Login()" />
+
+        <br />
+        <span> {{ LoginVM.Password }} </span>
+        <br />
+        <span> {{ LoginVM.UserLogin }} </span>
+    </form>
+
+    <br />
+    <input type="button" class="btn btn-default" value="{{ LoginVM.ConmuteLoginText }}" 
+           ng-click="LoginVM.ConmuteLogin()" />
+
+</div>

@@ -2,13 +2,21 @@
 
     <div class="form-group">
         <label for="exampleInputEmail1">Nombre</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        <input type="email" class="form-control" placeholder="Nombre Usuario" 
+               ng-model="LoginVM.UserLogin">
     </div>
+
     <div class="form-group">
         <label for="exampleInputPassword1">Contraseña</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <input type="password" class="form-control" placeholder="Contraseña" 
+               ng-model="LoginVM.Password">
     </div>
 
-    <button type="button" class="btn btn-default" ng-click="MainVM.Login()" >Login</button>
-
+    <input type="button" class="btn btn-default" value="Login" 
+           ng-click="LoginVM.Login()" />
+    
+    <br/>  
+    <span> {{ LoginVM.Password }} </span>
+    <br />
+    <span> {{ LoginVM.UserLogin }} </span>
 </div>
