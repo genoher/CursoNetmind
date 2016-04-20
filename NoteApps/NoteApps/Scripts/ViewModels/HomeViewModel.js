@@ -1,7 +1,8 @@
 ﻿HomeViewModel = function () {
 
     var self = this;
-        
+       
+    
 }
 
 angular.module("NotesApp")

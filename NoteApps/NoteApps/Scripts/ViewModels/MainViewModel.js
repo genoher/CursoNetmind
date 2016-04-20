@@ -1,5 +1,10 @@
 ﻿MainViewModel = function () {
+
     var self = this;
+
+    // Relacionar
+    GlobalsInstance.MainVM = self;
+
     self.Title = "Qué pasa tronco!!";
 
     self.IsLogon = false;
@@ -14,5 +19,8 @@
 
 }
 
+//GlobalsInstance.MainVM = new MainViewModel();
+
 angular.module("NotesApp")
        .controller("MainViewModel", MainViewModel);
+

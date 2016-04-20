@@ -1,4 +1,4 @@
-﻿LoginViewModel2 = function () {
+﻿LoginViewModel3 = function () {
 
     var self = this;
 
@@ -29,4 +29,4 @@
 }
 
 angular.module("NotesApp")
-       .controller("LoginViewModel2", LoginViewModel2);
+       .controller("LoginViewModel3", LoginViewModel3);

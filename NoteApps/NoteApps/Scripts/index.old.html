@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html ng-app="NotesApp">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Notes App</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Styles NotesApp -->
+    <link href="Css/site.css" rel="stylesheet" />
+    <link href="CSS/home.css" rel="stylesheet" />
+    <!-- Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <!-- Angular Animate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-animate.min.js"></script>
+    <!-- Angular Route:  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-route.min.js"></script>
+    <!-- Angular UI Bootstrap  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.2/ui-bootstrap-tpls.min.js"></script>
+    <!-- Javascript NotesApp -->
+    <script src="Application/NotesApp.js"></script>
+    <script src="Application/Globals.js"></script>
+    <script src="ViewModels/MainViewModel.js"></script>
+    <script src="ViewModels/LoginViewModel.js"></script>
+    <script src="ViewModels/LoginViewModel2.js"></script>
+    <script src="ViewModels/HomeViewModel.js"></script>
+</head>
+<body>
+ 
+    <div class="container" ng-controller="MainViewModel as MainVM">
+        <h2>Ejercicio 1</h2>
+        <section>
+            <p> <span>Titulo:</span>{{ MainVM.Title }}</p>
+            <input type="text" ng-model="MainVM.Title" />
+            <input type="button" value="Cambiar Titulo" ng-click="MainVM.ChangeTitle()" />
+            <input type="button" value="Lanzar un Alert" ng-click="MainVM.RaiseAlert()" />
+        </section>
+
+        <section>
+            <h3>Apuntes: Clases con Javascript</h3>
+            <p>
+                Dentro de una clase javascript podemos tener fields, properties, functions...
+                <br />
+                <span>Ejemplo: </span>
+                <xmp>
+                    /* MainViewModel seria el nombre de la clase */
+                    MainViewModel = function () {
+
+                    var self = this; /* Super importante!! */
+
+                    self.Title = "Qué pasa tronco!!"; /* Field / Property */
+
+                    // Funcion que cambia la propiedad titulo
+                    self.ChangeTitle = function() {
+                    self.Title = "hola caracola";
+                    }
+
+                    // Funcion que muestra un alert con el titulo
+                    self.RaiseAlert = function () {
+                    alert(self.Title);
+                    }
+                    }
+                </xmp>
+            </p>
+        </section>
+    </div>
+
+    <div class="container" ng-controller="LoginViewModel as LoginVM">
+        <h2>Ejercicio 2</h2>
+        <p>Incluir una pagina que mostraremos y ocultaremos mediante un boton.</p>
+        <section>
+            <div ng-include="'Views/LoginView.html'" ng-show="LoginVM.IsLoginVisible">
+            </div>
+            <br />
+            <input type="button" class="btn btn-default" value="{{ LoginVM.ConmuteLoginText }}" ng-click="LoginVM.ConmuteLogin()" />
+        </section>
+
+        <section>
+            <h3>Apuntes: ng-include, ng-show</h3>
+            <p>Dos maneras de incluir una partial view, directiva <a href="https://code.angularjs.org/1.5.3/docs/api/ng/directive/ngInclude" target="_blank">ng-include</a> dentro de un div, o directamente como un elemento.</p>
+            <xmp>
+                <div ng-include="'Views/LoginView.html'">
+                </div>
+
+                <ng-include src="'Views/LoginView.html'">
+                </ng-include>
+            </xmp>
+            <p>Para mostra/ocultar utilizar la directiva <a href="https://code.angularjs.org/1.5.3/docs/api/ng/directive/ngShow" target="_blank">ng-show</a> </p>
+            <xmp>
+                <div ng-show="true">
+                </div>
+            </xmp>
+        </section>
+    </div>
+
+    <div class="container">
+        <h2>Ejercicio 3</h2>
+        <p>similar al anterior pero el controller se maneja desde la propia vista</p>
+        <section>
+            <div ng-include="'Views/LoginView2.html'">
+            </div>               
+        </section>        
+    </div>
+    
+    <div class="container"  ng-controller="MainViewModel as MainVM">
+        <h2>Ejercicio 4</h2>
+        <p>Tenemos dos vistas, que son manejadas desde el controller Main.</p>
+        <section>
+            <div ng-include="'Views/LoginView2.html'" ng-show="!MainVM.IsLogon">
+            </div>
+
+            <div ng-include="'Views/HomeView.html'" ng-show="MainVM.IsLogon">
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <h2>Ayuda</h2>
+        <!-- Directivas Angular -->
+        <a href="https://code.angularjs.org/1.5.3/docs/api">Directivas Angular</a>
+    </div>
+
+</body>
+</html>

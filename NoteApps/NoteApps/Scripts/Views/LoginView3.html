@@ -1,0 +1,20 @@
+﻿<div class="container">
+    <form class="form-signin form-horizontal" ng-controller="LoginViewModel3 as LoginVM">
+        <h2 class="form-signin-heading">Ingresa tus credenciales</h2>
+        <label for="inputUser" class="">Usuario</label>
+        <input type="text" id="inputUser" class="form-control" 
+               placeholder="Nombre de Usuario" required="" autofocus=""
+               ng-model="LoginVM.UserLogin">
+        <label for="inputPassword" class="">Password</label>
+        <input type="password" id="inputPassword" class="form-control" 
+               placeholder="Password" required=""
+               ng-model="LoginVM.Password">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <input class="btn btn-lg btn-primary btn-block" type="submit" 
+               value="Ingresar" ng-click="LoginVM.Login()" />
+    </form>
+</div>
