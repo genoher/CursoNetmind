@@ -19,6 +19,8 @@
 
     self.Logout = function () {
         self.IsLogon = false;
+
+        location.pathname = "/";
     }
 
 }
