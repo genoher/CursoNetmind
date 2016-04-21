@@ -17,6 +17,10 @@
         alert(self.Title);
     }
 
+    self.Logout = function () {
+        self.IsLogon = false;
+    }
+
 }
 
 //GlobalsInstance.MainVM = new MainViewModel();
