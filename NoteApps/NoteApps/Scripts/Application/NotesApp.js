@@ -10,6 +10,11 @@ NotesApp.config(function ($routeProvider, $locationProvider) {
 
     $routeProvider
     // route for the Start page
+    .when('/', {
+        templateUrl: '/Scripts/Views/DashboardView.html',
+        controller: 'DashboardViewModel',
+        controllerAs: 'DashboardVM'
+    })
     .when('/Dashboard', {
         templateUrl: '/Scripts/Views/DashboardView.html',
         controller: 'DashboardViewModel',
